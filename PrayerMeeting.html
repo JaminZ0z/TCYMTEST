@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TCYM-อคทพ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    /* Custom Styles */
+    .navbar {
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+    .navbar-brand {
+        font-weight: bold;
+    }
+    .header-background {
+        background-image: url('https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/441490458_418671030967226_1325234793682355516_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGZlJIlFd3bLi0PExasrhC0GOxNRJmBPAwY7E1EmYE8DMbwlnxJGtcAumGq4fZWSgWFFmaUZWvIlPRjSPQYA4bj&_nc_ohc=Ni8OxgQPmysQ7kNvgHQO99V&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYCEC1yDga4RJ0IVFRVI9-43Bjo7mi3p42XxdySXx-ccyw&oe=66B369EE');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff; 
+        padding: 2rem;
+        position: relative;
+    }
+    .header-background::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .header-background h1, .header-background p {
+        position: relative;
+        z-index: 2;
+    }
+    .logo {
+        position: absolute; 
+        top: 20px; 
+        left: 20px; 
+        width: 100px; 
+        height: auto; 
+    }
+    .social-buttons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        text-align: center;
+    }
+    .social-button {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px 0; /* Adjust vertical spacing */
+        transition: transform 0.3s ease;
+    }
+    .social-button img {
+        width: 100%;
+        height: auto;
+    }
+    .facebook-button {
+        background-color: #4267B2; 
+    }
+    .instagram-button {
+        background-color: #E1306C;
+    }
+    .social-button:hover {
+        transform: scale(1.1);
+    }
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card-img-top {
+        border-radius: 10px 10px 0 0;
+    }
+    .footer {
+        background-color: #f8f9fa;
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid #e9ecef;
+    }
+    .footer a {
+        color: #007bff;
+    }
+</style>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/Main-Page.html">TCYM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/Main-Page.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/HiM.html">HiM Camp</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/CASTrip.html">Come And See</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/PrayerMeeting.html">Prayer Meeting</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <!-- Social Media Buttons -->
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/profile.php?id=100084729961005&sk=photos&locale=th_TH" class="social-button facebook-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    </a>
+    <a href="https://www.instagram.com/tcym.group/" class="social-button instagram-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+    </a>
+</div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

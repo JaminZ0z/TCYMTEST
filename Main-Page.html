@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCYM-อคทพ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .navbar {
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .header-background {
+            background-image: url('https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/441490458_418671030967226_1325234793682355516_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGZlJIlFd3bLi0PExasrhC0GOxNRJmBPAwY7E1EmYE8DMbwlnxJGtcAumGq4fZWSgWFFmaUZWvIlPRjSPQYA4bj&_nc_ohc=Ni8OxgQPmysQ7kNvgHQO99V&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYCEC1yDga4RJ0IVFRVI9-43Bjo7mi3p42XxdySXx-ccyw&oe=66B369EE');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff; 
+            padding: 2rem;
+            position: relative;
+        }
+        .header-background::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .header-background h1, .header-background p {
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            width: 100px; 
+            height: auto; 
+        }
+        .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .social-button {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 10px 0; /* Adjust vertical spacing */
+            transition: transform 0.3s ease;
+        }
+        .social-button img {
+            width: 100%;
+            height: auto;
+        }
+        .facebook-button {
+            background-color: #4267B2; 
+        }
+        .instagram-button {
+            background-color: #E1306C;
+        }
+        .social-button:hover {
+            transform: scale(1.1);
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer a {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/Main-Page.html">TCYM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/HiM.html">HiM Camp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/CASTrip.html">Come And See</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/PrayerMeeting.html">Prayer Meeting</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="jumbotron text-center header-background custom-font">
+        <h1 class="display-2">TCYM</h1>
+        <p class="custom-font1 front-size1">อนุชนคริสเตียนไทยเพื่อพันธกิจโลก</p>
+    </header>
+    <!-- Mission Objectives Section -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">กลุ่มอนุชนคริสเตียนไทยเพื่อพันธกิจโลก (อคทพ.)</h2>
+                    <p class="card-text">กลุ่มอนุชนคริสเตียนไทยเพื่อพันธกิจโลก (อคทพ.) ถูกจัดตั้งขึ้นโดยมีวัตถุประสงค์หลักๆ อยู่ 4 ประการได้แก่:</p>
+                    <ul>
+                        <li>เพื่อขับเคลื่อนให้อนุชนคริสเตียนไทยมีความเข้าใจถึงความสำคัญของการมีส่วนในงานมิชชั่น (งานพันธกิจโลก)</li>
+                        <li>เพื่อสร้างภาระใจและนิมิตให้กับอนุชนคริสเตียนไทยที่จะถวายตัวเป็นมิชชันนารีออกไปรับใช้พระเจ้ายังกลุ่มชนอื่นๆ ที่พระกิตติคุณยังเข้าไม่ถึง</li>
+                        <li>เพื่อระดมทุนจากอนุชนคริสเตียนไทยเพื่อมีส่วนในการสนับสนุนมิชชันนารีคนไทยที่ออกไปทำงานรับใช้พระเจ้ายังภาคสนาม</li>
+                        <li>เพื่อส่งอนุชนคริสเตียนไทยออกไปรับใช้พระเจ้าท่ามกลางกลุ่มชนที่พระกิตติคุณยังเข้าไม่ถึง</li>
+                    </ul>
+                    <p class="card-text">เพื่อบรรลุทั้ง 4 วัตถุประสงค์นี้ กลุ่มอนุชนคริสเตียนไทยเพื่อพันธกิจโลก (อคทพ.) จึงได้จัดค่าย HiM (Here I am for Mission) เพื่อขับเคลื่อนให้อนุชนคริสเตียนไทยมีความเข้าใจมากขึ้นถึงการทำงานมิชชั่น โดย อคทพ. จัดค่าย HiM มาแล้วอย่างน้อย 2 ครั้ง และมีการจัดประชุมอธิษฐานเผื่อกลุ่มชนที่พระกิตติคุณยังเข้าไม่ถึงทุกๆ 3 เดือน เพื่อสร้างนิมิตและภาระใจให้กับอนุชนที่เข้าร่วม และเพื่อเตรียมอนุชนให้พร้อมสำหรับงานมิชชั่น</p>
+                    <p class="card-text">อคทพ. ได้ส่งสามคนจากกรรมการกลุ่มไปยังแผ่นดินอีสาน โดยติดต่อขอเข้าพื้นที่ผ่านทางผู้รับใช้ภาคสนามของ SIM ที่ทำงานอยู่ในจังหวัดหนองคาย ตั้งแต่วันที่ 7-14 พฤษภาคม 2024 โดยได้รับการสนับสนุนจากคริสตจักรบ้านพระพรและมูลนิธิวิคลิฟไทย</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- News Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Main Article -->
+                <div class="card mb-4">
+                    <img class="card-img-top" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/414719187_331455126355484_4907855764497139223_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHzT7GP4O7Wnx7a-h1MYmfktgnST9VCj3G2CdJP1UKPcVI57IdlYc9Vnfg8Weam5Og2vOzV4hY4fLNZNdrgXHZA&_nc_ohc=iLynWKSCOIQQ7kNvgHfnBtT&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYAXrJs9GDlOgclEpopFNYECG6zFBohDw8zgR13YgVCR6w&oe=66B378C5" alt="Main Article Image">
+                    <div class="card-body">
+                        <h2 class="card-title">HiM Camp</h2>
+                        <p class="card-text">กลับมาอีกครั้งตามคำเรียกร้อง!! (หวังว่ามีคนเรียกร้องนะ) ⛺️ค่าย HiM (Here I’m for Mission) ครั้งที่ 2 หัวข้อค่าย “เรียนรู้ เข้าใจ ลงมือทำงานพันธกิจโลก”......</p>
+                        <a href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/HiM.html" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Other Articles -->
+                <div class="card mb-4">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100084729961005%2Fvideos%2F851170580206163%2F&show_text=false&width=560&t=0" width="727" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    <div class="card-body">
+                        <h2 class="card-title">Come And See Trip</h2>
+                        <p class="card-text">กลุ่มอนุชนคริสเตียนไทยเพื่อพันธกิจโลก (อคทพ.) ถูกจัดตั้งขึ้นโดยมีวัตถุประสงค์หลักๆ อยู่ 4 ประการได้แก่......</p>
+                        <a href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/CASTrip.html" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0cVaLthcHriDygVagqTEmECTgvyHmWmwNqQtnE3N9DxG4SiqtQNfwWd1CxSNfqvWPl%26id%3D100084729961005&show_text=false&width=500" width="727" height="357" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <div class="card-body">
+                        <h2 class="card-title">Prayer Meeting</h2>
+                        <p class="card-text">ขอเชิญชวนพี่น้องทุกท่าน มาร่วมกันอธิษฐานเผื่อกลุ่มชนที่พระกิตติคุณยังเข้าไม่ถึง และเรียนรู้การประกาศข้ามวัฒนธรรม กับกลุ่มอนุชนคริสเตียนไทยเพื่อพันธกิจโลก (อคทพ.)......</p>
+                        <a href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/PrayerMeeting.html" class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widgets -->
+            <div class="col-md-4">
+                <!-- Recent News Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Recent News</h5>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Recent Article 1</a></li>
+                            <li><a href="#">Recent Article 2</a></li>
+                            <li><a href="#">Recent Article 3</a></li>
+                            <li><a href="#">Recent Article 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="m-0 text-dark">© 2024 TCYM News. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/profile.php?id=100084729961005&sk=photos&locale=th_TH" class="social-button facebook-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+        </a>
+        <a href="https://www.instagram.com/tcym.group/" class="social-button instagram-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        </a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

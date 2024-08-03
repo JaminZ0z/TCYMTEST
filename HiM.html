@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>HiM Camp - TCYM</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        /* Custom Styles */
+        .navbar {
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+
+        .header-background {
+            background-image: url('https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/441490458_418671030967226_1325234793682355516_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGZlJIlFd3bLi0PExasrhC0GOxNRJmBPAwY7E1EmYE8DMbwlnxJGtcAumGq4fZWSgWFFmaUZWvIlPRjSPQYA4bj&_nc_ohc=Ni8OxgQPmysQ7kNvgHQO99V&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYCEC1yDga4RJ0IVFRVI9-43Bjo7mi3p42XxdySXx-ccyw&oe=66B369EE');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff; 
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .header-background::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            transition: transform 5s ease;
+        }
+        .header-background:hover::after {
+            transform: scale(1.05);
+        }
+        .header-background h1 {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .header-background p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            font-family: 'Roboto', sans-serif;
+        }
+        .logo {
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            width: 100px; 
+            height: auto; 
+        }
+        .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+        .social-button {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 10px 0; /* Adjust vertical spacing */
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .social-button img {
+            width: 100%;
+            height: auto;
+        }
+        .facebook-button {
+            background-color: #4267B2; 
+        }
+        .instagram-button {
+            background-color: #E1306C;
+        }
+        .social-button:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+            padding: 2rem 0;
+            text-align: center;
+            color: #fff;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer a {
+            color: #fff;
+        }
+        .footer a:hover {
+            color: #ddd;
+        }
+        .content-section {
+            padding: 2rem 0;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .register-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to right, #28a745, #218838);
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .register-btn:hover {
+            background: linear-gradient(to right, #218838, #1e7e34);
+            transform: scale(1.05);
+        }
+        .img-fluid {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/Main-Page.html">TCYM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/Main-Page.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/HiM.html">HiM Camp</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/CASTrip.html">Come And See</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/yinde/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/New%20folder/PrayerMeeting.html">Prayer Meeting</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+    <!-- Header Section -->
+    <header class="jumbotron text-center header-background custom-font">
+        <h1 class="display-2">HiM Camp</h1>
+        <p class="custom-font1 front-size1">ค่าย HiM (Here I’m for Mission)</p>
+    </header>
+
+    <!-- Register Button Section -->
+    <div class="text-center mb-4">
+        <a href="https://your-registration-link.com" class="register-btn">Register Now</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section">
+        <!-- Image Gallery -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>บรรยากาศภายในค่าย</h2>
+                <img src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/438094052_410456971788632_150531393256666548_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEjgsCSMFRluS5yS4gpXcAaIgog_EjfGqkiCiD8SN8aqbw7_i6U8dcplxLwW3f_Po5ueBHI0spfNYgDcXiV_ETV&_nc_ohc=lZBv0CYGa5gQ7kNvgGq7ocV&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYCMfm87BUIr3StLaU6-hlnq0u6RAntaJaAtzNFboqQP-Q&oe=66B3A179" class="img-fluid mb-3" alt="Event Image 1">
+                <img src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/436209448_396340266533636_9194127911475621134_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGqqp2K4RBSJ8R9-fmydyxnu6f_m6WGGau7p_-bpYYZq5bHfp00MBVlOH8s79GYgYN5nuK5dj94sHYvK7SeVSNx&_nc_ohc=w3RREvBO92gQ7kNvgHexNWU&_nc_ht=scontent.fcnx4-1.fna&oh=00_AYD8oHAuu8LKRPLYjttknoEo4HTZxW3BZzOrARTO14XixQ&oe=66B39254" class="img-fluid mb-3" alt="Event Image 2">
+            </div>
+
+            <!-- Video Gallery -->
+            <div class="col-md-6">
+                <h2>(❁´◡`❁)</h2>
+                <div class="video-container">
+                  <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100084729961005%2Fvideos%2F813136770866440%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                </div>
+                <div class="video-container mt-3">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100084729961005%2Fvideos%2F991079835771102%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                </div>
+                <!-- Added Text -->
+                <p class="mt-3" style="font-size: 1.2rem; color: #333; font-weight: bold; text-align: center; background: #f8f9fa; padding: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); max-width: 90%; margin: 0 auto;">
+                  ค่าย HiM เป็นค่ายที่จะพาคุณได้เรียนรู้ เข้าใจ เเละลงมือทำในงานพัธกิจมิชชั่นผ่านกิจกรรมมากมายไม่ว่าจะเป็นการเรียนรู้ประวัติศาสตร์งานมิชชั่น การเรียนรู้พระคัมภีร์ การเดินประกาศ เยี่ยมศิยาภิบาล เเละที่สำคัญได้มีการพาไปลงมือปฏิบัติจริง! น่าสนใจขนาดนี้พลาดไม่ได้แล้ว ลงทะเบียนตอนนี้!
+              </p>
+              
+              
+              </p>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="m-0">© 2024 TCYM News. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/profile.php?id=100084729961005&sk=photos&locale=th_TH" class="social-button facebook-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+        </a>
+        <a href="https://www.instagram.com/tcym.group/" class="social-button instagram-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        </a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0r
+</body>
+</html>
